@@ -8,12 +8,12 @@
 
 ## Day2
 - [x] Part1
-- [] Part2
+- [ ] Part2
 
 ## Day3
-- [] Part1
-- [] Part2
+- [ ] Part1
+- [ ] Part2
 
 ## Day4
-- [] Part1
-- [] Part2
+- [ ] Part1
+- [ ] Part2
