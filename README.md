@@ -3,12 +3,12 @@
 > https://adventofcode.com/
 
 ## Day1
-- [x] Part1 : 54331
-- [x] Part2 : 54518
+- [x] Part1 : `54331`
+- [x] Part2 : `54518`
 
 ## Day2
-- [x] Part1
-- [ ] Part2
+- [x] Part1 : `2348`
+- [x] Part2 : `76008`
 
 ## Day3
 - [ ] Part1

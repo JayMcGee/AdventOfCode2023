@@ -93,22 +93,40 @@ fn is_valid(game: Game) -> (bool, i32) {
     (is_valid, game.id)
 }
 
+fn part2(game: Game) -> i32 {
+    // Grab the highest number of each vector
+    let min_red = game.red_cubes.iter().fold(std::i32::MIN, |a, b| a.max(*b));
+    let min_green = game
+        .green_cubes
+        .iter()
+        .fold(std::i32::MIN, |a, b| a.max(*b));
+    let min_blue = game.blue_cubes.iter().fold(std::i32::MIN, |a, b| a.max(*b));
+
+    let power = min_red * min_blue * min_green;
+    power
+}
+
 pub fn day2() {
     let lines = read_lines("inputs/day2.txt");
 
-    let mut sum = 0;
+    // let mut valid_sum = 0;
+    let mut power_sum: i32 = 0;
 
     for g in lines {
         let game = Game::from_str(&g).unwrap();
-        // lets check if the game is valid
-        let res = is_valid(game);
+        // lets check if the game is valid (Part1)
+        // let res = is_valid(game);
 
-        if res.0 {
-            sum += res.1;
-            println!("Game {} is valid sum so far {}", res.1, sum);
-        }
+        // if res.0 {
+        //     valid_sum += res.1;
+        //     println!("Game {} is valid sum so far {}", res.1, valid_sum);
+        // }
+
+        // Part2
+        power_sum += part2(game);
     }
 
     // Print the final sum
-    println!("Final sum: {}", sum);
+    // println!("Final Part1 sum: {}", valid_sum);
+    println!("Final Part2 sum: {}", power_sum);
 }
